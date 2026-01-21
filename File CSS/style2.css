@@ -1,0 +1,68 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:Inter, Arial, sans-serif;line-height:1.5;color:#222}
+
+
+/* LAYOUT */
+.container{max-width:1100px;margin:0 auto;padding:20px}
+
+
+/* HEADER */
+header{background:linear-gradient(90deg,#0f172a,#0b1220);color:#fff}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:18px 20px}
+.logo{font-weight:700;font-size:1.25rem}
+nav ul{display:flex;gap:18px;list-style:none}
+nav a{color:rgba(255,255,255,0.9);text-decoration:none;padding:8px 10px;border-radius:6px}
+nav a:hover{background:rgba(255,255,255,0.06)}
+
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:48px 20px}
+.hero-inner{display:flex;flex-direction:column;gap:18px}
+.headline{font-size:2rem;font-weight:800;color:#fff}
+.subhead{color:rgba(255,255,255,0.85);max-width:60%}
+.cta{display:inline-block;background:#06b6d4;color:#062023;padding:12px 20px;border-radius:10px;font-weight:700;text-decoration:none}
+.hero-image img{width:100%;border-radius:12px}
+
+
+/* GENERAL SECTIONS */
+section{padding:56px 20px}
+.section-title{font-size:1.5rem;margin-bottom:12px}
+.lead{max-width:70%;margin-bottom:12px;color:#213547}
+
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.service-card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(12,18,24,0.06)}
+.service-icon{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#06b6d4,#3b82f6);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;margin-bottom:10px}
+.service-title{font-weight:700;margin-bottom:6px}
+.service-desc{color:#475569}
+
+
+/* CONTACT FORM */
+.contact-form{max-width:700px;background:#fff;padding:18px;border-radius:10px;box-shadow:0 8px 28px rgba(9,15,22,0.06)}
+.form-row{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+label{font-size:0.9rem;color:#0f172a}
+input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #cbd5e1;font-size:1rem}
+textarea{min-height:120px;resize:vertical}
+.btn-submit{background:#0b78b5;color:white;border:none;padding:12px 18px;border-radius:8px;font-weight:700;cursor:pointer}
+.btn-submit:hover{filter:brightness(0.95)}
+
+
+/* FOOTER */
+footer{background:#0b1220;color:rgba(255,255,255,0.8);padding:20px;text-align:center}
+.social a{color:rgba(255,255,255,0.9);text-decoration:none;margin:0 5px}
+
+
+/* RESPONSIVE */
+@media (min-width:800px){
+.hero{grid-template-columns:1fr 1fr}
+.subhead{max-width:85%}
+}
+
+
+@media (max-width:799px){
+.services-grid{grid-template-columns:1fr}
+.headline{font-size:1.6rem}
+.subhead{max-width:100%}
+.topbar{padding:12px}
+}
