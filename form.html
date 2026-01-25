@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <title>Form Identitas Warga</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Form Inputan Warga Baru</legend>
+
+            <div>
+                <label for="nama-depan">Nama Depan :</label> <br />
+                <input id="nama-depan" name="nama_depan" placeholder="Nama Depan" />
+            </div>
+
+            <div>
+                <label for="nama-belakang">Nama Belakang :</label> <br />
+                <input 
+                    id="nama-belakang" 
+                    name="nama_belakang" 
+                    placeholder="Nama Belakang" 
+                />
+            </div>
+
+            <div>
+                <label for="story">Alamat saat ini:</label> <br />
+                <textarea id="story" name="story" rows="5" cols="33"></textarea>
+                <br />
+            </div>
+
+            <div>
+                <label>Tempat Lahir :</label> <br />
+                <input type="text" name="tempat-lahir" /> <br />
+            </div>
+
+            <div>
+                <label>Tanggal Lahir :</label> <br />
+                <input type="date" name="tgl_lahir" /> <br />
+            </div>
+
+            <label for="nama-belakang">Jenis Kelamin :</label> <br />
+
+            <div>
+                <input id="lk" type="radio" name="jenis_kelamin" />
+                <label for="lk">Laki-Laki</label>
+            </div>
+
+            <div>
+                <input id="pr" type="radio" name="jenis_kelamin" />
+                <label for="pr">Perempuan</label>
+            </div>
+
+            <label for="nama-belakang">Bahasa Asing yang dikuasai :</label> <br />
+
+            <div>
+                <input id="inggris" type="checkbox" name="bahasa_asing" />
+                <label for="inggris">Inggris</label>
+            </div>
+
+            <div>
+                <input id="arab" type="checkbox" name="bahasa_asing" />
+                <label for="arab">Arab</label>
+            </div>
+
+            <div>
+                <input id="jerman" type="checkbox" name="bahasa_asing" />
+                <label for="jerman">Jerman</label>
+            </div>
+
+            <p>
+                <input type="submit" name="submit" value="Submit" />
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
