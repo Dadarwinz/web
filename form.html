@@ -2,8 +2,34 @@
 <html>
 <head>
     <title>Form Identitas Warga</title>
+    <link rel="stylesheet" href="File CSS/style4.css"/>
 </head>
 <body>
+     <header id="atas">
+      <h1>Bandung</h1>
+      <p>
+        Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi
+        tersebut.
+      </p>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="#sejarah">Sejarah</a>
+          </li>
+          <li>
+            <a href="#geografis">Geografis</a>
+          </li>
+          <li>
+            <a href="#wisata">Wisata</a>
+          </li>
+          <li>
+            <a href="form.html" target="_blank">Perpindahan Penduduk</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <form>
         <fieldset>
             <legend>Form Inputan Warga Baru</legend>
@@ -23,37 +49,73 @@
             </div>
 
             <div>
-                <label for="story">Alamat saat ini:</label> <br />
-                <textarea id="story" name="story" rows="5" cols="33"></textarea>
+                <label for="agama">Agama :</label> <br />
+                <select name="agama" id="agama">
+                    <option value="islam">Islam</option>
+                    <option value="kristen">Kristen Protestan</option>
+                    <option value="katolik">Katolik</option>
+                    <option value="hindu">Hindu</option>
+                    <option value="buddha">Buddha</option>
+                    <option value="konghucu">Konghucu</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="NIK">NIK :</label> <br />
+                <input id="NIK" name="NIK" placeholder="Nomor Induk Kependudukan" />
+            </div>
+            
+            <div>
+                <label for="no-telepon">No. Telepon :</label> <br />
+                <input id="no-telepon" name="no_telepon" placeholder="No. Telepon" />
+            </div>
+            
+            <div>
+                <label for="email">Email :</label> <br />
+                <input id="email" name="email" placeholder="Email" />
+            </div>
+
+            <div>
+                <label for="alamat">Alamat saat ini:</label> <br />
+                <textarea id="alamat" name="alamat" rows="5" cols="33"></textarea>
                 <br />
             </div>
+
 
             <div>
                 <label>Tempat Lahir :</label> <br />
                 <input type="text" name="tempat-lahir" /> <br />
             </div>
-
+            
             <div>
                 <label>Tanggal Lahir :</label> <br />
                 <input type="date" name="tgl_lahir" /> <br />
             </div>
-
+            
             <label for="nama-belakang">Jenis Kelamin :</label> <br />
-
+            
             <div>
                 <input id="lk" type="radio" name="jenis_kelamin" />
                 <label for="lk">Laki-Laki</label>
             </div>
-
+            
             <div>
                 <input id="pr" type="radio" name="jenis_kelamin" />
                 <label for="pr">Perempuan</label>
             </div>
-
+            
+            <div>
+                <label for="nikah">Status Pernikahan :</label> <br />
+                <select name="nikah" id="nikah">
+                    <option value="belum">Belum Menikah</option>
+                    <option value="sudah">Sudah Menikah</option>
+                </select>
+            </div>
+            
             <label for="nama-belakang">Bahasa Asing yang dikuasai :</label> <br />
 
             <div>
-                <input id="inggris" type="checkbox" name="bahasa_asing" />
+                <input id="inggris" type="checkbox" name="bahasa_asing" /> 
                 <label for="inggris">Inggris</label>
             </div>
 

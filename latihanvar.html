@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Variabel dan Fungsi</title>
+</head>
+<body>
+    <h2>Belajar Variabel, Tipe Data, dan Fungsi</h2>
+
+    <button onclick="tampilkanData()">Tampilkan Data</button>
+
+    <p id="output"></p>
+</body>
+
+<script>
+    // Variabel dan Tipe Data
+    let nama = "Andi";
+    nama = "Budi"; // Mengubah nilai variabel
+    let umur = 17;
+    let tinggi = 165.5;
+    let siswaAktif = true;
+
+    // Fungsi
+    function tampilkanData() {
+        let hasil =
+            nama +
+            " berumur " +
+            umur +
+            " tahun, tinggi " +
+            tinggi +
+            " cm, dan status siswa aktif: " +
+            siswaAktif;
+
+        document.getElementById("output").innerHTML = hasil;
+    }
+</script>
+</html>
