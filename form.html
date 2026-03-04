@@ -31,27 +31,24 @@
     </header>
 
     <form>
-        <fieldset>
-            <legend>Form Inputan Warga Baru</legend>
+        <fieldset> <!-- fieldset digunakan untuk mengelompokkan beberapa elemen dalam sebuah form -->
+            <legend>Form Inputan Warga Baru</legend> <!-- legend digunakan untuk memberikan judul pada fieldset -->
 
             <div>
-                <label for="nama-depan">Nama Depan :</label> <br />
-                <input id="nama-depan" name="nama_depan" placeholder="Nama Depan" />
+                <label for="nama-depan">Nama Depan :</label> <br /> <!-- label digunakan untuk memberikan keterangan pada inputan, for digunakan untuk menghubungkan label dengan inputan -->
+                <input id="nama-depan" name="nama_depan" placeholder="Nama Depan" /> <!-- input digunakan untuk membuat inputan, id digunakan untuk menghubungkan dengan label, name digunakan untuk memberikan nama pada inputan, placeholder digunakan untuk memberikan contoh inputan -->
             </div>
 
             <div>
                 <label for="nama-belakang">Nama Belakang :</label> <br />
-                <input 
-                    id="nama-belakang" 
-                    name="nama_belakang" 
-                    placeholder="Nama Belakang" 
+                <input id="nama-belakang" name="nama_belakang" placeholder="Nama Belakang" 
                 />
             </div>
 
             <div>
                 <label for="agama">Agama :</label> <br />
-                <select name="agama" id="agama">
-                    <option value="islam">Islam</option>
+                <select name="agama" id="agama"> <!-- select digunakan untuk membuat dropdown, name digunakan untuk memberikan nama pada dropdown, id digunakan untuk menghubungkan dengan label -->
+                    <option value="islam">Islam</option> <!-- option digunakan untuk membuat pilihan pada dropdown, value digunakan untuk memberikan nilai pada pilihan -->
                     <option value="kristen">Kristen Protestan</option>
                     <option value="katolik">Katolik</option>
                     <option value="hindu">Hindu</option>
@@ -77,14 +74,14 @@
 
             <div>
                 <label for="alamat">Alamat saat ini:</label> <br />
-                <textarea id="alamat" name="alamat" rows="5" cols="33"></textarea>
+                <textarea id="alamat" name="alamat" rows="5" cols="33"></textarea> <!-- textarea digunakan untuk membuat inputan yang lebih besar, rows digunakan untuk menentukan jumlah baris, cols digunakan untuk menentukan jumlah kolom -->
                 <br />
             </div>
 
 
             <div>
                 <label>Tempat Lahir :</label> <br />
-                <input type="text" name="tempat-lahir" /> <br />
+                <input type="text" name="tempat-lahir" placeholder="Tempat Lahir"/> <br />
             </div>
             
             <div>
@@ -106,7 +103,7 @@
             
             <div>
                 <label for="nikah">Status Pernikahan :</label> <br />
-                <select name="nikah" id="nikah">
+                <select name="nikah" id="nikah"> 
                     <option value="belum">Belum Menikah</option>
                     <option value="sudah">Sudah Menikah</option>
                 </select>
@@ -120,7 +117,7 @@
             </div>
 
             <div>
-                <input id="arab" type="checkbox" name="bahasa_asing" />
+                <input id="arab" type="checkbox" name="bahasa_asing" /> <!-- checkbox digunakan untuk membuat inputan yang bisa dipilih lebih dari satu -->
                 <label for="arab">Arab</label>
             </div>
 
@@ -130,9 +127,10 @@
             </div>
 
             <p>
-                <input type="submit" name="submit" value="Submit" />
+                <input type="submit" name="submit" value="Submit" /> <!-- submit digunakan untuk membuat tombol submit, name digunakan untuk memberikan nama pada tombol, value digunakan untuk memberikan teks pada tombol -->
             </p>
         </fieldset>
     </form>
+    <script src="File JS/script.js"></script>
 </body>
 </html>
