@@ -1,19 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() { // pastikan script dijalankan setelah halaman selesai dimuat
 
-    const form = document.querySelector("form"); // ambil form
-
-    // TOMBOL RESET
-    const resetButton = document.createElement("button"); 
-    resetButton.textContent = "Reset"; // teks tombol
-    resetButton.type = "button"; // supaya tidak submit
-    form.appendChild(resetButton); // masukkan ke dalam form
-
-    resetButton.addEventListener("click", function() {
-        form.reset(); // mengosongkan semua input
-    });
+    const form = document.querySelector("form"); // ambil form dengan querySelector
 
     // TOMBOL SUBMIT
-    form.addEventListener("submit", function(event) {
+    form.addEventListener("submit", function(event) { // tambahkan event listener untuk submit form
 
         event.preventDefault(); // supaya tidak reload halaman
 
@@ -27,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() { // pastikan script di
         const alamat = document.getElementById("alamat").value;
 
         // ambil jenis kelamin yang dipilih
-        const jenisKelamin = document.querySelector('input[name="jenis_kelamin"]:checked');
+        const jenisKelamin = document.querySelector('input[name="jenis_kelamin"]:checked'); // ambil input yang dipilih dengan name jenis kelamin dan yang checked
 
         let jkvalue = "Tidak dipilih"; // default
         if (jenisKelamin) {  // jika ada yang dipilih
@@ -35,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function() { // pastikan script di
         }
 
         // ambil bahasa asing yang dicentang
-        const bahasa = document.querySelectorAll('input[name="bahasa_asing"]:checked');
-        let daftarBahasa = "";
+        const bahasa = document.querySelectorAll('input[name="bahasa_asing"]:checked'); // ambil semua input yang dicentang dengan name bahasa asing
+        let daftarBahasa = ""; // untuk menyimpan daftar bahasa asing yang dipilih
 
         bahasa.forEach(function(item) { // untuk setiap yang dicentang
             daftarBahasa += item.nextElementSibling.textContent + ", "; // ambil teks setelah input dan tambahkan ke daftar

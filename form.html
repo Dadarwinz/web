@@ -1,9 +1,9 @@
-<!doctype html>
+<!doctype html> <!-- Menandakan dokumen HTML versi terbaru -->
 <html>
-<head>
-    <title>Form Identitas Warga</title>
-    <link rel="stylesheet" href="File CSS/style4.css"/>
-</head>
+<head> 
+    <title>Form Identitas Warga</title> <!-- Judul yang keluar di tab browser -->
+    <link rel="stylesheet" href="File CSS/style4.css"/> <!-- Mengambil file CSS eksternal -->
+</head> 
 <body>
      <header id="atas">
       <h1>Bandung</h1>
@@ -30,18 +30,19 @@
       </nav>
     </header>
 
-    <form>
+    <form> <!-- Sebagai wadah bagi inputan user -->
         <fieldset> <!-- fieldset digunakan untuk mengelompokkan beberapa elemen dalam sebuah form -->
-            <legend>Form Inputan Warga Baru</legend> <!-- legend digunakan untuk memberikan judul pada fieldset -->
+        <legend>Form Inputan Warga Baru</legend> <!-- legend digunakan untuk memberikan judul pada fieldset -->
 
-            <div>
+            <div> <!-- Mengelompokkan beberapa elemen -->
                 <label for="nama-depan">Nama Depan :</label> <br /> <!-- label digunakan untuk memberikan keterangan pada inputan, for digunakan untuk menghubungkan label dengan inputan -->
-                <input id="nama-depan" name="nama_depan" placeholder="Nama Depan" /> <!-- input digunakan untuk membuat inputan, id digunakan untuk menghubungkan dengan label, name digunakan untuk memberikan nama pada inputan, placeholder digunakan untuk memberikan contoh inputan -->
+                <!--input type text untuk menuliskan type -->
+                <input type="text" id="nama-depan" name="nama_depan" placeholder="Nama Depan" /> <!-- input digunakan untuk membuat inputan dengan beberapa jenis inputan, id digunakan untuk menghubungkan dengan label, name digunakan untuk memberikan nama pada inputan, placeholder digunakan untuk memberikan contoh inputan -->
             </div>
 
             <div>
                 <label for="nama-belakang">Nama Belakang :</label> <br />
-                <input id="nama-belakang" name="nama_belakang" placeholder="Nama Belakang" 
+                <input type="text" id="nama-belakang" name="nama_belakang" placeholder="Nama Belakang" 
                 />
             </div>
 
@@ -59,22 +60,22 @@
             
             <div>
                 <label for="NIK">NIK :</label> <br />
-                <input id="NIK" name="NIK" placeholder="Nomor Induk Kependudukan" />
+                <input type="tel" id="NIK" name="NIK" placeholder="Nomor Induk Kependudukan" pattern="0123456789"/>
             </div>
             
             <div>
                 <label for="no-telepon">No. Telepon :</label> <br />
-                <input id="no-telepon" name="no_telepon" placeholder="No. Telepon" />
+                <input type="tel" id="no-telepon" name="no_telepon" placeholder="No. Telepon" pattern="0123456789" />
             </div>
             
             <div>
                 <label for="email">Email :</label> <br />
-                <input id="email" name="email" placeholder="Email" />
+                <input type="email" id="email" name="email" placeholder="Email" />
             </div>
 
             <div>
                 <label for="alamat">Alamat saat ini:</label> <br />
-                <textarea id="alamat" name="alamat" rows="5" cols="33"></textarea> <!-- textarea digunakan untuk membuat inputan yang lebih besar, rows digunakan untuk menentukan jumlah baris, cols digunakan untuk menentukan jumlah kolom -->
+                <textarea id="alamat" name="alamat" rows="5" cols="33"></textarea> <!-- textarea digunakan untuk membuat inputan beberapa baris, rows digunakan untuk menentukan jumlah baris, cols digunakan untuk menentukan jumlah kolom -->
                 <br />
             </div>
 
@@ -86,23 +87,25 @@
             
             <div>
                 <label>Tanggal Lahir :</label> <br />
-                <input type="date" name="tgl_lahir" /> <br />
-            </div>
-            
-            <label for="nama-belakang">Jenis Kelamin :</label> <br />
-            
-            <div>
-                <input id="lk" type="radio" name="jenis_kelamin" />
-                <label for="lk">Laki-Laki</label>
+                <input type="date" name="tgl_lahir"/> <br /> <!-- type date untuk inputan jenis tanggal (tanggal,bulan dan tahun)-->
             </div>
             
             <div>
-                <input id="pr" type="radio" name="jenis_kelamin" />
-                <label for="pr">Perempuan</label>
-            </div>
+                <label for="nama-belakang">Jenis Kelamin :</label> <br />
             
+                <div>
+                    <input id="lk" type="radio" name="jenis_kelamin" /> <!-- radio digunakan untuk membuat inputan yang hanya bisa dipilih satu, memiliki value laki-laki -->
+                    <label for="lk">Laki-Laki</label>
+                </div>
+            
+                <div>
+                    <input id="pr" type="radio" name="jenis_kelamin" />
+                    <label for="pr">Perempuan</label>
+                </div>
+            </div>
+
             <div>
-                <label for="nikah">Status Pernikahan :</label> <br />
+                <label for="nikah">Status Pernikahan :</label> <br /> 
                 <select name="nikah" id="nikah"> 
                     <option value="belum">Belum Menikah</option>
                     <option value="sudah">Sudah Menikah</option>
@@ -117,7 +120,7 @@
             </div>
 
             <div>
-                <input id="arab" type="checkbox" name="bahasa_asing" /> <!-- checkbox digunakan untuk membuat inputan yang bisa dipilih lebih dari satu -->
+                <input id="arab" type="checkbox" name="bahasa_asing" /> <!-- checkbox digunakan untuk membuat inputan yang bisa dipilih lebih dari satu, setiap checkbox memiliki value -->
                 <label for="arab">Arab</label>
             </div>
 
@@ -126,11 +129,12 @@
                 <label for="jerman">Jerman</label>
             </div>
 
-            <p>
-                <input type="submit" name="submit" value="Submit" /> <!-- submit digunakan untuk membuat tombol submit, name digunakan untuk memberikan nama pada tombol, value digunakan untuk memberikan teks pada tombol -->
-            </p>
+            <div class="button ">
+                <button type="submit" class="btn-submit">Submit</button> <!-- button digunakan untuk membuat tombol, type digunakan untuk menentukan jenis tombol, class digunakan untuk memberikan kelas pada tombol -->
+                <button type="reset" class="btn-reset">Reset</button> <!-- reset digunakan untuk membuat tombol yang dapat menghapus semua inputan yang telah diisi, class digunakan untuk memberikan kelas pada tombol -->
+            </div>
         </fieldset>
     </form>
-    <script src="File JS/script.js"></script>
+    <script src="File JS/script.js"></script> <!-- script digunakan untuk menghubungkan dengan file javascript, src digunakan untuk menentukan sumber file javascript -->
 </body>
 </html>

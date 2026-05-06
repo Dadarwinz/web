@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf</title>
+</head>
+<body>
+    <form>
+        <legend>Bookshelf Apps</legend>
+        <h2>Masukkan Buku Baru</h2>
+        <div>
+            <label for="judul">Judul Buku:</label>
+            <input type="text" id="judul" name="judul" placeholder="Masukkan Judul Buku"><br><br>
+        </div>
+
+        <div>
+            <label for="penulis">Penulis:</label>
+            <input type="text" id="penulis" name="penulis" placeholder="Masukkan Nama Penulis"><br><br>
+        </div>
+
+        <div>
+            <label for="tahun">Tahun Terbit:</label>
+            <input type="number" id="tahun" name="tahun" placeholder="Masukkan Tahun Terbit"><br><br>
+        </div>
+
+        <div>
+            <div>
+                <label for="status">Status:</label> <br /> 
+                <select name="status" id="status"> 
+                    <option value="belum">Belum selesai dibaca</option>
+                    <option value="sudah">Sudah selesai dibaca</option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <button type="button" onclick="Tampilkandata()">Submit</button>
+        </div>
+    </form>
+    <script>
+        function Tampilkandata() {
+            var judul = document.getElementById('judul').value;
+            var penulis = document.getElementById('penulis').value;
+            var tahun = document.getElementById('tahun').value;
+            var status = document.getElementById('status').value;
+
+            document.getElementById('output').innerHTML = 
+                "Judul Buku: " + judul + "<br>" +
+                "Penulis: " + penulis + "<br>" +
+                "Tahun Terbit: " + tahun + "<br>" +
+                "Status: " + (status === "belum" ? "Belum selesai dibaca" : "Sudah selesai dibaca");
+        }
+    </script>
+    <div id="output"></div>
+</body>
+</html>

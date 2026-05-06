@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <h1>APLIKASI KEPENTINGAN</h1>
+
+    <form >
+        <fieldset>
+            <legend>Form kepentingan</legend>
+                <label for="kepentingan">Kategori Tugas</label>
+                <select id="kepentingan">
+                    <option value="Pekerjaan Rumah">Penting dan mendesak</option>
+                    <option value="Pekerjaan Kantor">Penting tapi tidak mendesak</option>
+                    <option value="Pekerjaan Lainnya">Kurang penting tapi mendesak</option>
+                </select>
+
+                <label for="tugas">Tugas:</label>
+                <input type="text" id="tugas" name="tugas">
+
+                <button id="tambah">Tambah Tugas</button>
+
+                <ul id="tugas-list"></ul>
+        </fieldset>
+    </form>
+    <script src="todo.js"></script>
+    
+</body>
+</html>

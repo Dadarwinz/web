@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+
+</head>
+<body>
+    <h1 id="judul">Halaman Home</h1>
+    <p>Selamat Datang</p>
+
+    <form>
+        <fieldset>
+            <legend>Informasi Pribadi</legend>
+            <label for="nama">Masukkan Nama:</label> <br><br>
+            <input type="text" id="nama"> <br><br>
+            <label for="no">Masukkan No HP:</label> <br><br>
+            <input type="text" id="no"> <br><br>
+            <label for="foto">Masukkan Foto:</label> <br><br>
+            <input type="file" id="foto"> <br><br>
+        </fieldset>
+    </form>
+    <button id="btn">submit</button> <br><br>
+    
+    <script>
+        const btn = document.getElementById('btn');
+        const judul = document.getElementById('judul');
+        const paragraf = document.querySelector('p');
+        const inputNama = document.getElementById('nama');
+        const inputNo = document.getElementById('no');
+        const inputFoto = document.getElementById('foto');
+        
+
+        btn.addEventListener('click' , function() {
+            judul.innerText = 'Halaman Admin';
+            judul.style.color = 'blue';
+            paragraf.innerText = 'Selamat Datang ' + inputNama.value + ', hubungi ' + inputNo.value + ' Jika ada yang ingin ditanyakan';
+            paragraf.style.color = 'blue';
+            document.body.style.backgroundColor = 'yellow';
+        });
+        inputNama.addEventListener('input', function() {
+            this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+        });
+        inputNo.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+
+        inputFoto.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.style.maxWidth = '200px';
+                    document.body.appendChild(img);
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+    </script>
+</body>
+</html>
